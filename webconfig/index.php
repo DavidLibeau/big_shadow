@@ -279,90 +279,90 @@
     <p>
 
 
-    <script type='text/javascript'>
-        //<![CDATA[ 
+        <script type='text/javascript'>
+            var palette = ["#000", "#777777", "#FFFFFF", "#000055", "#0000AA", "#0000FF", "#005500", "#005555", "#0055AA", "#0055FF", "#00AA00", "#00AA55", "#00AAAA", "#00AAFF", "#00FF00", "#00FF55", "#00FFAA", "#00FFFF", "#550000", "#550055", "#5500AA", "#5500FF", "#555500", "#555555", "#5555AA", "#5555FF", "#55AA00", "#55AA55", "#55AAAA", "#55AAFF", "#55FF00", "#55FF55", "#55FFAA", "#55FFFF", "#AA0000", "#AA0055", "#AA00AA", "#AA00FF", "#AA5500", "#AA5555", "#AA55AA", "#AA55FF", "#AAAA00", "#AAAA55", "#AAAAAA", "#AAAAFF", "#AAFF00", "#AAFF55", "#AAFFAA", "#AAFFFF", "#FF0000", "#FF0055", "#FF00AA", "#FF00FF", "#FF5500", "#FF5555", "#FF55FF", "#FFAA00", "#FFAA55", "#FFAAAA", "#FFFF00", "#FFFF55", "#FFFFAA", "#FFAAFF", "#FF55AA"];
 
-        function printColor(source, color) {
-            var f, h, s, b;
-            $(source).spectrum("set", color);
-            f = $("#face").spectrum("get");
-            s = $("#shadow").spectrum("get");
-            b = $("#back").spectrum("get");
-            drawNumber(f.toHexString(), s.toHexString(), s.toHexString(), b.toHexString());
-        }
-
-
-        $("#face").spectrum({
-            color: "#000",
-            showPaletteOnly: true,
-            change: function(color) {
-                printColor("#face", color);
-            },
-            hide: function(color) {
-                printColor("#face", color);
-            },
-            palette: [
-                ["#000", "#777777", "#FFFFFF"]
-            ]
-        });
-
-        $("#shadow").spectrum({
-            color: "#000",
-            showPaletteOnly: true,
-            change: function(color) {
-                printColor("#shadow", color);
-            },
-            hide: function(color) {
-                printColor("#shadow", color);
-            },
-            palette: [
-                ["#000", "#777777", "#FFFFFF"]
-            ]
-        });
-        $("#back").spectrum({
-            color: "#000",
-            showPaletteOnly: true,
-            change: function(color) {
-                printColor("#back", color);
-            },
-            hide: function(color) {
-                printColor("#back", color);
-            },
-            palette: [
-                ["#000", "#777777", "#FFFFFF"]
-            ]
-        });
+            function printColor(source, color) {
+                var f, h, s, b;
+                $(source).spectrum("set", color);
+                f = $("#face").spectrum("get");
+                s = $("#shadow").spectrum("get");
+                b = $("#back").spectrum("get");
+                drawNumber(f.toHexString(), s.toHexString(), s.toHexString(), b.toHexString());
+            }
 
 
+            $("#face").spectrum({
+                color: "#000",
+                showPaletteOnly: true,
+                change: function(color) {
+                    printColor("#face", color);
+                },
+                hide: function(color) {
+                    printColor("#face", color);
+                },
+                palette: [
+                    palette
+                ]
+            });
 
-        //Setup to allow easy adding more options later
-
-        var submitButton = document.getElementById("save_button");
-
-        submitButton.addEventListener("click",
-            function() {
-                console.log("Submit");
-                var options = saveOptions();
-
-
-                var return_to = decodeURIComponent(gup('return_to'));
-                if (return_to == "null") {
-                    return_to = 'pebblejs://close#'
-                };
-
-                var loc = return_to + encodeURIComponent(JSON.stringify(options));
-                console.log(return_to);
-
-                console.log(loc);
-                document.location = loc;
-            },
-            false);
+            $("#shadow").spectrum({
+                color: "#000",
+                showPaletteOnly: true,
+                change: function(color) {
+                    printColor("#shadow", color);
+                },
+                hide: function(color) {
+                    printColor("#shadow", color);
+                },
+                palette: [
+                    palette
+                ]
+            });
+            $("#back").spectrum({
+                color: "#000",
+                showPaletteOnly: true,
+                change: function(color) {
+                    printColor("#back", color);
+                },
+                hide: function(color) {
+                    printColor("#back", color);
+                },
+                palette: [
+                    palette
+                ]
+            });
 
 
 
+            //Setup to allow easy adding more options later
 
-        //]]>  
-    </script>
+            var submitButton = document.getElementById("save_button");
+
+            submitButton.addEventListener("click",
+                function() {
+                    console.log("Submit");
+                    var options = saveOptions();
+
+
+                    var return_to = decodeURIComponent(gup('return_to'));
+                    if (return_to == "null") {
+                        return_to = 'pebblejs://close#'
+                    };
+
+                    var loc = return_to + encodeURIComponent(JSON.stringify(options));
+                    console.log(return_to);
+
+                    console.log(loc);
+                    document.location = loc;
+                },
+                false);
+
+
+
+
+            //]]>  
+        </script>
 
 
 </body>
