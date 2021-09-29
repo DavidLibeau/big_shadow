@@ -1,0 +1,86 @@
+{
+    "author": "DavidLibeau",
+    "dependencies": {},
+    "keywords": [],
+    "name": "big-shadow",
+    "pebble": {
+        "capabilities": [
+            "configurable"
+        ],
+        "displayName": "Big Shadow LTS",
+        "enableMultiJS": false,
+        "messageKeys": {
+            "KEY_BACKCOLOR": 23,
+            "KEY_BASECOLOR": 20,
+            "KEY_BSHADECOLOR": 22,
+            "KEY_BTVIBRATE": 2,
+            "KEY_RSHADECOLOR": 21,
+            "KEY_SHOWSTATUS": 1
+        },
+        "projectType": "native",
+        "resources": {
+            "media": [
+                {
+                    "file": "images/menuimage.png",
+                    "menuIcon": true,
+                    "name": "IMAGE_MENUIMAGE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/bigrastr.png",
+                    "name": "IMAGE_BIGRASTR",
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/rastr.png",
+                    "memoryFormat": "1Bit",
+                    "name": "IMAGE_RASTR",
+                    "storageFormat": "pbi",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/rastrh.png",
+                    "memoryFormat": "1Bit",
+                    "name": "IMG_RASTRH",
+                    "storageFormat": "pbi",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/rastrd.png",
+                    "memoryFormat": "1Bit",
+                    "name": "IMG_RASTRD",
+                    "storageFormat": "pbi",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/popiskyskrz.png",
+                    "name": "IMAGE_POPISKY",
+                    "type": "png-trans"
+                },
+                {
+                    "file": "fonts/FFFFORWA.TTF",
+                    "name": "FONT_BLOCK_20",
+                    "trackingAdjust": -1,
+                    "type": "font"
+                }
+            ]
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite",
+            "emery"
+        ],
+        "uuid": "54245e09-942f-4ab1-b0c6-7c8fd8c92fac",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "1.61.0"
+}
