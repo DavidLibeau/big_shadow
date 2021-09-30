@@ -27,7 +27,6 @@ Pebble.addEventListener('showConfiguration', function (e) {
         platform = "aplite";
     }
 
-    //if ((platform=="basalt")||(platform=="chalk"))  {
     url = "http://dav.li/pebble/bigshadow/index.php?c1=" + c1 + "&c2=" + c2 + "&c3=" + c3 + "&c4=" + c4 + "&c5=" + c5 + "&c6=" + c6;
     console.log(url);
     Pebble.openURL(url);
